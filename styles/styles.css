@@ -1,0 +1,86 @@
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+
+#logo {
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    margin: 20px 0 0 20px;
+    background-color: rgba(255,255,255,0.7);
+    border-radius: 200px;
+}
+
+.logo_midori {
+    position: relative;
+    width: 140%;
+    left: -42px;
+}
+
+#carousel {
+    display: flex;
+    width: 100%;
+    height: 114vh;
+    overflow: hidden;
+    position: absolute;
+    z-index: -10;
+    top: -166px;
+    left: 0;
+}
+
+.carousel-item_container {
+    width: 100vw;
+}
+
+.text-container {
+    position: relative;
+    top: 250px;
+    left: 80vw;
+    height: 150px;
+    width: 150px;
+    border-radius: 200px;
+    background-color: rgba(255,255,255,0.7);
+}
+
+.carousel-item_container_description {
+    padding-top: 50px;
+    text-align: center;
+}
+
+.carousel-item_container_image {
+    width: 100%;
+}
+
+#footer {
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+    background-color: white;
+    color: black;
+    text-align: center;
+    font-size: 30px;
+}
+
+.contact {
+    padding-left: 40vw;
+}
+
+.social {
+    padding-right: 3vw;
+}
+
+.social_item_instagram {
+    width: 50px;
+}
