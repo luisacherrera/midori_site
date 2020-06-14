@@ -1,4 +1,6 @@
 const carousel = document.getElementById('carousel');
+const carouselTotalWidth = carousel.scrollWidth;
+const carouselMovement = window.innerWidth;
 const scroll = setTimeout(scroller, 5000);
 
 // window.addEventListener('touchend', manualScroll);
@@ -7,8 +9,8 @@ scroll;
 
 function scroller() {
     const scroll = setTimeout(scroller, 5000);
-    const lastScroll = carousel.scrollWidth - carousel.clientWidth;
-    carousel.scrollLeft += carousel.clientWidth
+    const lastScroll = carouselTotalWidth - carouselMovement;
+    carousel.scrollLeft += carouselMovement
 
     if ( carousel.scrollLeft < lastScroll) {
         scroll;
@@ -19,8 +21,8 @@ function scroller() {
 };
 
 // function manualScroll() {
-//     const lastScroll = carousel.scrollWidth - carousel.clientWidth;
-//     carousel.scrollLeft += carousel.clientWidth
+//     const lastScroll = carouselTotalWidth - carouselMovement;
+//     carousel.scrollLeft += carouselMovement
 
 //     if ( carousel.scrollLeft < lastScroll) {
 //         manualScroll;
