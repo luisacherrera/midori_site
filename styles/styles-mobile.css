@@ -79,7 +79,7 @@ p, a {
 
 #footer {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     position: fixed;
     left: 0;
     bottom: 0;
@@ -93,7 +93,7 @@ p, a {
 
 .contact {
     padding-top: 10px;
-    padding-left: 40vw;
+    font-size: 0.8em;
 }
 
 .social {
@@ -102,5 +102,6 @@ p, a {
 }
 
 .social_item_instagram {
-    width: 50px;
+    width: 35px;
+    padding-top: 5px;
 }
