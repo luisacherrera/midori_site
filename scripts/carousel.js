@@ -3,7 +3,7 @@ const carouselTotalWidth = carousel.scrollWidth;
 const carouselMovement = window.innerWidth;
 const scroll = setTimeout(scroller, 5000);
 
-// window.addEventListener('touchend', manualScroll);
+window.addEventListener('touchend', manualScroll);
 
 scroll;
 
@@ -20,14 +20,14 @@ function scroller() {
     };
 };
 
-// function manualScroll() {
-//     const lastScroll = carouselTotalWidth - carouselMovement;
-//     carousel.scrollLeft += carouselMovement
+function manualScroll() {
+    const lastScroll = carouselTotalWidth - carouselMovement;
+    carousel.scrollLeft += carouselMovement
 
-//     if ( carousel.scrollLeft < lastScroll) {
-//         manualScroll;
-//     } else {
-//         carousel.scrollLeft = 0;
-//         manualScroll;    
-//     };
-// };
+    if ( carousel.scrollLeft < lastScroll) {
+        manualScroll;
+    } else {
+        carousel.scrollLeft = 0;
+        manualScroll;    
+    };
+};
