@@ -44,6 +44,13 @@ p, a {
     left: 0;
 }
 
+@media only screen and (orientation: landscape) {
+    #carousel {
+        height: 125vh;
+        top: -115px;
+    }
+}
+
 .carousel-item_container {
     width: 100vw;
     overflow: hidden;
@@ -57,6 +64,13 @@ p, a {
     width: 115px;
     border-radius: 200px;
     background-color: rgba(255,255,255,0.7);
+}
+
+@media only screen and (orientation: landscape) {
+    .text-container {
+        top: 80vh;
+        left: 80vw;
+    }
 }
 
 .text-container_center {
@@ -77,6 +91,13 @@ p, a {
 .carousel-item_container_image {
     height: 100vh;
     object-position: -125vw 0px;
+}
+
+@media only screen and (orientation: landscape) {
+    .carousel-item_container_image {
+        width: 100vw;
+        object-position: 0px;
+    }
 }
 
 #footer {
