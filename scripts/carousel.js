@@ -1,16 +1,18 @@
 const carousel = document.getElementById('carousel');
-const carouselTotalWidth = carousel.scrollWidth;
-const carouselMovement = window.innerWidth;
+const items = document.getElementsByClassName('carousel-item');
+
+let currentItem; 
+
+window.addEventListener('touchmove', manualScroll);
+window.addEventListener('resize', orientation);
+
 const scroll = setTimeout(scroller, 5000);
-
-window.addEventListener('touchend', manualScroll);
-
 scroll;
 
 function scroller() {
     const scroll = setTimeout(scroller, 5000);
-    const lastScroll = carouselTotalWidth - carouselMovement;
-    carousel.scrollLeft += carouselMovement
+    let lastScroll = carousel.scrollWidth - window.innerWidth;
+    carousel.scrollLeft += window.innerWidth
 
     if ( carousel.scrollLeft < lastScroll) {
         scroll;
@@ -18,11 +20,18 @@ function scroller() {
         carousel.scrollLeft = 0;
         scroll;    
     };
+
+
+    Object.entries(items).forEach(element => {
+        if ( isInViewport(element[1]) ) {
+            currentItem = element;
+        };
+    });
 };
 
 function manualScroll() {
-    const lastScroll = carouselTotalWidth - carouselMovement;
-    carousel.scrollLeft += carouselMovement
+    const lastScroll = carousel.scrollWidth - window.innerWidth;
+    carousel.scrollLeft += window.innerWidth
 
     if ( carousel.scrollLeft < lastScroll) {
         manualScroll;
@@ -31,3 +40,18 @@ function manualScroll() {
         manualScroll;    
     };
 };
+
+function orientation() {
+    let position = currentItem[0];
+    let movement = window.innerWidth * position;
+
+    carousel.scrollLeft = movement;
+}
+
+function isInViewport(element) {
+    const rect = element.getBoundingClientRect();
+
+    if (rect.x === 0) {
+        return element
+    }
+}
