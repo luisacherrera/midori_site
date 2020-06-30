@@ -122,15 +122,11 @@ p, a {
 
 @media only screen and (orientation: landscape) {
     #footer {
-        justify-content: space-between;
+        justify-content: center;
     }
 
     .contact {
-        padding-left: 30vw;
-    }
-
-    .social {
-        padding-right: 3vw;
+        padding-right: 20px;
     }
 }
 

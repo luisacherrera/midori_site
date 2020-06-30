@@ -260,7 +260,24 @@
 
         <div id="footer">
             <div class="contact">
-                <a href="mailto:info@midoriarquitectura.com">info@midoriarquitectura.com</a>
+                <script type="text/javascript" language="javascript">
+                    { coded = "0DVI@A02I40p4lb0wdiwb4p.iIA"
+                      key = "vGYJoyq09xCV6rTcSU1MudwFphmE387IRlnOzNHj4WiLQXfb2ZK5BAsPetkagD"
+                      shift=coded.length
+                      link=""
+                      for (i=0; i<coded.length; i++) {
+                        if (key.indexOf(coded.charAt(i))==-1) {
+                          ltr = coded.charAt(i)
+                          link += (ltr)
+                        }
+                        else {     
+                          ltr = (key.indexOf(coded.charAt(i))-shift+key.length) % key.length
+                          link += (key.charAt(ltr))
+                        }
+                      }
+                    document.write("<a href='mailto:"+link+"'>"+link+"</a>")
+                    }
+                </script>
             </div>
             <div class="social">
                 <div class="social_item">
