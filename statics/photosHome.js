@@ -1,4 +1,4 @@
-export const photos = {
+export default photos = {
     photos: [
         {
             "name": "Concurs Biblioteca d'Arenys de Mar (finalista)",
