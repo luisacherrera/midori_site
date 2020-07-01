@@ -1,4 +1,4 @@
-import photos from '../statics/photosHome';
+import photos from '../statics/photosHome.js';
 
 const list = document.getElementById('carousel');
 
