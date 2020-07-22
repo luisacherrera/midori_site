@@ -3,7 +3,6 @@ const items = document.getElementsByClassName('carousel-item');
 
 let currentItem; 
 
-window.addEventListener('touchmove', manualScroll);
 window.addEventListener('resize', checkOrientation);
 
 const scroll = setTimeout(scroller, 5000);
