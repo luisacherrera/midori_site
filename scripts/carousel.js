@@ -4,17 +4,17 @@ const items = document.getElementsByClassName('carousel-item');
 let currentItem; 
 
 window.addEventListener('touchmove', manualScroll);
-window.addEventListener('resize', orientation);
+window.addEventListener('resize', checkOrientation);
 
 const scroll = setTimeout(scroller, 5000);
 scroll;
 
 function scroller() {
     const scroll = setTimeout(scroller, 5000);
-    let lastScroll = carousel.scrollWidth - window.innerWidth;
+    let scrollingEnd = carousel.scrollWidth - window.innerWidth;
     carousel.scrollLeft += window.innerWidth
 
-    if ( carousel.scrollLeft < lastScroll) {
+    if ( carousel.scrollLeft < scrollingEnd) {
         scroll;
     } else {
         carousel.scrollLeft = 0;
@@ -29,23 +29,11 @@ function scroller() {
     });
 };
 
-function manualScroll() {
-    const lastScroll = carousel.scrollWidth - window.innerWidth;
-    carousel.scrollLeft += window.innerWidth
+function checkOrientation() {
+    let itemInViewport = currentItem[0];
+    let adjustToViewport = window.innerWidth * itemInViewport;
 
-    if ( carousel.scrollLeft < lastScroll) {
-        manualScroll;
-    } else {
-        carousel.scrollLeft = 0;
-        manualScroll;    
-    };
-};
-
-function orientation() {
-    let position = currentItem[0];
-    let movement = window.innerWidth * position;
-
-    carousel.scrollLeft = movement;
+    carousel.scrollLeft = adjustToViewport;
 }
 
 function isInViewport(element) {

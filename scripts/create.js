@@ -1,4 +1,4 @@
-import photos from '../statics/photosHome.js';
+import carouselElements from '../statics/photosHome.js';
 
 const list = document.getElementById('carousel');
 
@@ -20,4 +20,4 @@ function buildElements(name, path) {
     list.appendChild(item);
 }
 
-photos.photos.forEach(photo => buildElements(photo.name, photo.file));
+carouselElements.photos.forEach(photo => buildElements(photo.name, photo.file));

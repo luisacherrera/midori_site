@@ -1,4 +1,4 @@
-export default photos = {
+export default carouselElements = {
     photos: [
         {
             "name": "Concurs Biblioteca d'Arenys de Mar (finalista)",
